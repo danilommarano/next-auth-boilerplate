@@ -19,6 +19,11 @@ export const LoginSchema = z.object({
   password: z.string().min(1, {
     message: "Senha é necessária",
   }),
+  code: z.optional(
+    z.string().length(6, {
+      message: "O código deve conter 6 números",
+    })
+  ),
 });
 
 export const RegisterSchema = z.object({
