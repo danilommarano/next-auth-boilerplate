@@ -15,7 +15,6 @@ import { LogoutButton } from "./logout-button";
 
 export const UserButton = () => {
   const user = useCurrentUser();
-  console.log(user?.image);
 
   return (
     <DropdownMenu>

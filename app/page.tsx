@@ -12,10 +12,8 @@ export default function Home() {
         <p className="text-foreground text-lg">
           Um serviço de autenticação símples!
         </p>
-        <LoginButton>
-          <Button variant="default">
-            Sign in
-          </Button>
+        <LoginButton mode="modal" asChild>
+          <Button variant="default">Sign in</Button>
         </LoginButton>
       </div>
     </main>
