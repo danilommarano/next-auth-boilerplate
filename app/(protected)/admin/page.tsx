@@ -1,16 +1,14 @@
 "use client";
 
 import { admin } from "@/actions/admin";
-import { CardWrapper } from "@/components/auth/card-wrapper";
 import { FormSuccess } from "@/components/auth/form-success";
 import { RoleGate } from "@/components/auth/role-gate";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { useCurrentRole } from "@/hooks/use-current-role";
 import { UserRole } from "@prisma/client";
 import { toast } from "sonner";
 
-export const AdminPage = () => {
+const AdminPage = () => {
   const onApiRouteClick = () => {
     fetch("/api/admin").then((response) => {
       if (response.ok) {
